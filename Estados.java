@@ -1,14 +1,14 @@
-abstract class Estado {
-  public abstract calcularPrecio();
+interface Estado {
+  public Float calcularPrecio();
 }
 
-class Nueva extends Estado {
+class Nueva implements Estado {
   public Int calcularPrecio(Int precioBase) {
     return precioBase;
   }
 }
 
-class Promocion extends Estado {
+class Promocion implements Estado {
 
   private Float descuento;
 

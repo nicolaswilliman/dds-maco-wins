@@ -1,17 +1,17 @@
 // si no uso un metodo de pago en clase, le tengo que pasar metodo de pago como string y cantCuotas al constructor de Venta
 // y me podria dar el siguiente caso: "efectivo" y 2 cuotas, el cual no tiene sentido
 // la hago abstracta porque no deberias poder instanciar un metodo de pago
-abstract class MetodoDePago {
+interface MetodoDePago {
   public abstract Float calcularInteres(Float precio);
 }
 
-class Efectivo extends MetodoDePago {
+class Efectivo implements MetodoDePago {
   public Float calcularInteres(Float precio) {
     return 0;
   }
 }
 
-class Tarjeta extends MetodoDePago {
+class Tarjeta implements MetodoDePago {
   private Int cantCuotas;
 
   public Tarjeta(Int cantCuotas) {
