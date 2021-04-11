@@ -23,6 +23,6 @@ class Promocion extends Estado {
 
 class Liquidacion extends Estado {
   public Float calcularPrecio(Int precioBase) {
-    return precioBase * 0.5; //50% off 
+    return precioBase * 0.5; // 50% off 
   }
 }
