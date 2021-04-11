@@ -1,4 +1,3 @@
-
 class Venta {
 
   public Venta(String metodoDePago,  List<Prenda> prendas, Date fecha) {
