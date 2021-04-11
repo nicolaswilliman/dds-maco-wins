@@ -24,7 +24,6 @@ class Venta {
     if (this.metodoDePago.getMetodoDePago() == "efectivo") return 0;
     
     Float coeficienteInteres = 2;
-    Float porcentajeAregadoPorPrenda = 0.01;
     Float agregadoPrendas = prendas
                           .map(prenda -> prenda.interesAgregado()) // obtengo listado de precios
                           .reduce(0, (subtotal, valor) -> subtotal + valor);
