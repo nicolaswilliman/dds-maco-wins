@@ -16,6 +16,12 @@ class Prenda {
     this.tipo = tipo;
   }
 
+  // asumo que el porcentaje se aplica sobre el precio final, no el base
+  public interesAgregado() {
+    Int interes = 0.01;
+    return interes * this.precio();
+  }
+
   public Float precio() {
     return this.estado.calcularPrecio(this.precioBase);
   }

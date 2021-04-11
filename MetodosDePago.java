@@ -13,7 +13,6 @@ abstract class MetodoDePago {
 
 class Efectivo extends MetodoDePago {
   public Efectivo() {
-    this.cantCuotas = 1;
   }
 
   public String getMetodoDePago() {
