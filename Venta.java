@@ -17,7 +17,7 @@ class Venta {
     const Float ganancia = prendas
                     .map(prenda -> prenda.precio()) // obtengo listado de precios
                     .reduce(0, (subtotal, precio) -> subtotal + precio); // sumo todos los precios
-    return ganancia + calcularRecargo();
+    return ganancia + this.calcularRecargo();
   }
 
   public Float calcularRecargo() {
@@ -25,7 +25,7 @@ class Venta {
                           .map(prenda -> prenda.interesAgregado()) // obtengo listado de precios
                           .reduce(0, (subtotal, valor) -> subtotal + valor);
 
-    return this.metodoDePago.calcularRecargo(totalAgregadoPrendas);
+    return this.metodoDePago.calcularInteres(totalAgregadoPrendas);
   }
 
   public Int cantPrendas() {
