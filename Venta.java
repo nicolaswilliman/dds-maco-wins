@@ -1,6 +1,6 @@
 class Venta {
 
-  public Venta(String metodoDePago,  List<Prenda> prendas, Date fecha) {
+  public Venta(MetodoDePago metodoDePago,  List<Prenda> prendas, Date fecha) {
     this.metodoDePago = metodoDePago;
     this.prendas = prendas;
     this.fecha = fecha;
@@ -8,7 +8,7 @@ class Venta {
 
   private List<Prenda> prendas;
   
-  private String metodoDePago;
+  private MetodoDePago metodoDePago;
 
   private Date fecha;
 
